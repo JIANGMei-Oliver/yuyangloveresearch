@@ -72,7 +72,8 @@ img { display: block; max-width: 100%; }
 .volunteer-gallery { display: flex; flex-wrap: wrap; gap: 20px; }
 .volunteer-gallery figure { margin: 0; }
 .volunteer-gallery img { width: 200px; height: 125px; object-fit: cover; border: 1px solid var(--line); border-radius: 3px; }
-.volunteer-gallery figcaption { margin-top: 7px; color: var(--muted); font-size: 13px; }
+.volunteer-gallery figcaption { max-width: 200px; margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.45; }
+.activity-meta { display: block; margin-top: 2px; color: #7a7f85; font-size: 12px; }
 
 .education-list { border-top: 1px solid var(--line); }
 .education-row { display: grid; grid-template-columns: 1fr 90px; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
