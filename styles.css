@@ -52,19 +52,27 @@ img { display: block; max-width: 100%; }
 .publication-list { display: grid; gap: 30px; }
 .publication-empty { margin: 0; color: var(--muted); }
 .section-empty { margin: 0; color: var(--muted); }
+.publication-group { display: grid; gap: 20px; }
+.publication-group + .publication-group { padding-top: 10px; }
+.publication-group-title { margin: 0; padding-bottom: 7px; color: #3c4043; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 1.35; font-weight: 650; }
+.publication-group-list { display: grid; gap: 30px; }
 .publication-row { display: grid; grid-template-columns: 150px 1fr; gap: 28px; align-items: start; }
 .publication-image { width: 150px; height: 200px; object-fit: cover; object-position: top; border: 1px solid var(--line); border-radius: 3px; background: var(--soft); }
 .publication-copy h3 { margin: -4px 0 8px; font-size: 19px; line-height: 1.42; font-weight: 650; }
 .publication-authors { margin: 0; color: #3c4043; }
+.publication-year { margin: 7px 0 0; color: var(--text); font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.publication-venue { margin: 5px 0 0; color: var(--muted); font-size: 14px; font-style: italic; }
 .publication-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .publication-button { display: inline-flex; align-items: center; min-height: 32px; padding: 4px 12px; color: var(--link); background: #fff; border: 1px solid #a8bad3; border-radius: 4px; font-size: 13px; font-weight: 600; }
 .publication-button:hover, .publication-button:focus-visible { background: #f2f6fb; text-decoration: none; }
+.publication-row-text { grid-template-columns: 1fr; padding-left: 178px; }
 
 .artwork-list { display: grid; gap: 30px; }
 .artwork-empty { margin: 0; color: var(--muted); }
 .artwork-row { display: grid; grid-template-columns: 150px 1fr; gap: 28px; align-items: start; }
 .artwork-image { width: 150px; height: 200px; object-fit: cover; object-position: top; border: 1px solid var(--line); border-radius: 3px; background: var(--soft); }
 .artwork-copy h3 { margin: -4px 0 8px; font-size: 19px; line-height: 1.42; font-weight: 650; }
+.artwork-year { margin: 7px 0 0; color: var(--text); font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; }
 .artwork-details { margin: 0; color: var(--muted); }
 .artwork-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .artwork-button { display: inline-flex; align-items: center; min-height: 32px; padding: 4px 12px; color: var(--link); background: #fff; border: 1px solid #a8bad3; border-radius: 4px; font-size: 13px; font-weight: 600; }
@@ -76,10 +84,16 @@ img { display: block; max-width: 100%; }
 .volunteer-gallery figcaption { max-width: 200px; margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .activity-meta { display: block; margin-top: 2px; color: #7a7f85; font-size: 12px; }
 
+.honors-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.honors-list li { display: grid; grid-template-columns: 78px 1fr; gap: 20px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.honors-list span { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.honors-list p { margin: 0; }
+
 .education-list { border-top: 1px solid var(--line); }
 .education-row { display: grid; grid-template-columns: 1fr 90px; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .education-row p { margin: 0; }
 .education-row > span { color: var(--muted); text-align: right; font-size: 14px; }
+.education-row small { color: var(--muted); font-size: 13px; }
 
 .site-footer { background: var(--soft); }
 .footer-wrap { max-width: var(--max-width); margin: 0 auto; padding: 24px; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 13px; }
@@ -117,6 +131,7 @@ img { display: block; max-width: 100%; }
   .publication-row { grid-template-columns: 105px 1fr; gap: 18px; }
   .publication-image { width: 105px; height: 140px; }
   .publication-copy h3 { margin-top: 0; font-size: 17px; }
+  .publication-row-text { padding-left: 0; }
   .artwork-row { grid-template-columns: 105px 1fr; gap: 18px; }
   .artwork-image { width: 105px; height: 140px; }
   .artwork-copy h3 { margin-top: 0; font-size: 17px; }
